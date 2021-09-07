@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="da"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Transfer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TriforkProject</a> &gt; <a href="index.source.html" class="el_package">Logic.Entities.Transfer</a> &gt; <span class="el_source">Transfer.java</span></div><h1>Transfer.java</h1><pre class="source lang-java linenums">package Logic.Entities.Transfer;
+
+import Logic.Entities.ExpenseMember;
+
+public abstract class Transfer {
+
+<span class="fc" id="L7">    private static int idCounter = 0;</span>
+
+    private final int id;
+    private ExpenseMember member;
+    private double amount;
+    private boolean processed;
+
+<span class="fc" id="L14">    public Transfer(ExpenseMember member, double amount) {</span>
+<span class="fc" id="L15">        this.id = ++idCounter;</span>
+<span class="fc" id="L16">        this.member = member;</span>
+<span class="fc" id="L17">        this.amount = amount;</span>
+<span class="fc" id="L18">        this.processed = false;</span>
+<span class="fc" id="L19">    }</span>
+
+    public ExpenseMember getMember() {
+<span class="fc" id="L22">        return member;</span>
+    }
+
+    public void setMember(ExpenseMember member) {
+<span class="nc" id="L26">        this.member = member;</span>
+<span class="nc" id="L27">    }</span>
+
+    public double getAmount() {
+<span class="fc" id="L30">        return amount;</span>
+    }
+
+    public void setAmount(double amount) {
+<span class="nc" id="L34">        this.amount = amount;</span>
+<span class="nc" id="L35">    }</span>
+
+    public int getId() {
+<span class="nc" id="L38">        return id;</span>
+    }
+
+    public boolean isProcessed() {
+<span class="fc" id="L42">        return processed;</span>
+    }
+
+    public void setProcessed(boolean processed) {
+<span class="fc" id="L46">        this.processed = processed;</span>
+<span class="fc" id="L47">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
